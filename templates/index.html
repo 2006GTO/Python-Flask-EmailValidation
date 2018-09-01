@@ -1,0 +1,14 @@
+<!--Advanced Validation Example-->
+<h3>Enter a Valid(Any) Email!</h3>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p>{{message}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<form action='/process', method='post'>
+  <label for="email">Email</label>
+  <input id="email" name="email" type="text">
+  <button>Submit</button>
+</form>
